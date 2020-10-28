@@ -1,0 +1,10 @@
+{
+    "env": {
+        "MYSQL_USER": "root",
+        "MYSQL_PASSWORD": "R@2030&pa!*9178^",
+        "MYSQL_DATABASE": "teste_node",
+        "MYSQL_HOST": "localhost",
+        "MYSQL_PORT": 3306
+    }
+}
+

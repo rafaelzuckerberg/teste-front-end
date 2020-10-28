@@ -1,0 +1,61 @@
+.header {
+    width: 100%;
+    margin-top: 4%;
+
+    .title {
+        text-align: center;
+        font-size: 22px;
+        font-weight: 700;
+    }
+}
+
+
+.grid {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    .row {
+        width: 100%;
+
+        .col {
+            border-bottom: 0.3px dotted;
+            h3 {
+                font-size: 21px;
+                font-weight: 500;
+            }
+            p {
+                margin-top: -2%;
+                font-size: 18px;
+            }
+        }
+
+
+        #product-img {
+            width: 35%;
+        }
+
+        .col.s-12 {
+            width: 100%;
+        }
+
+        .col.s-6 {
+            width: 45%;
+        }
+        
+        .col.s-6.left {
+            float: left;
+        }
+        
+        .col.s-6.right {
+            float: right;
+        }
+    }
+}
+
+
+
+// Spiner component
+mat-spinner {
+    margin: 5% auto;
+}

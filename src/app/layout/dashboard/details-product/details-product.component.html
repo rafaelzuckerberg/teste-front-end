@@ -1,0 +1,66 @@
+<ng-template #loading>
+    <div class="mb-20" flFlex flexLayout="row" flexLayout.lt-md="column">
+        <div fxFlex>
+            <mat-spinner></mat-spinner>
+        </div>
+    </div>
+</ng-template>
+
+
+
+
+<ng-container *ngIf="this.service.product; else loading; let product">
+
+    <div class="header">
+        <div class="title">
+            Detalhes do produto
+        </div>
+    </div>
+    
+    <!-- <h2 mat-dialog-title>Install Angular</h2> -->
+    <mat-dialog-content class="mat-typography">
+     
+        <div class="grid">
+            <div class="row">
+                <div class="col s-6">
+                    <img [src]="this.service.product?.link" id="product-img">
+                </div>
+            </div>   
+    
+            <div class="row">
+                <div class="col s-6 left">
+                    <h3>Nome</h3>
+                    <p>{{ this.service.product?.name }}</p>
+                </div>
+                <div class="col s-6 right">
+                    <h3>Marca</h3>
+                    <p>{{ this.service.product?.brand }}</p>
+                </div>
+            </div>   
+            
+            
+            <div class="row">
+                <div class="col s-6 left">
+                    <h3>Modelo</h3>
+                    <p>{{ this.service.product?.model }}</p>
+                </div>
+                <div class="col s-12 right">
+                    <h3>Preço</h3>
+                    <p>{{ this.service.product?.price | currency:'R$' }}</p>
+                </div>
+            </div>   
+            
+            <div class="row">
+                <div class="col s-12">
+                    <h3>Descrição</h3>
+                    <p>{{ this.service.product?.label }}</p>
+                </div>
+            </div>   
+        </div>
+        
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+      <button mat-flat-button (click)="closeModal(null)">Voltar</button>
+    </mat-dialog-actions>
+
+</ng-container>

@@ -1,0 +1,9 @@
+<h1 mat-dialog-title>Deletar produto</h1>
+<div mat-dialog-content>
+  <p>tem certeza quer gostaria de deletar este produto?</p>
+  
+</div>
+<div mat-dialog-actions>
+  <button mat-flat-button color="warn" (click)="closeModal(null)">Cancelar</button>
+  <button mat-flat-button color="primary" cdkFocusInitial (click)="eventModal()">Sim!</button>
+</div>
